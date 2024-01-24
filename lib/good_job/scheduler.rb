@@ -71,6 +71,10 @@ module GoodJob # :nodoc:
     # @return [Boolean, nil]
     delegate :running?, to: :executor, allow_nil: true
 
+    # Tests whether the scheduler is shutting down.
+    # @return [Boolean, nil]
+    delegate :shuttingdown?, to: :executor, allow_nil: true
+
     # Tests whether the scheduler is shutdown.
     # @return [Boolean, nil]
     delegate :shutdown?, to: :executor, allow_nil: true
